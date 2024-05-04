@@ -1,0 +1,332 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+header {
+    background-color: white;
+    padding: 20px;
+    height: 85px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2; 
+}
+span{
+    color: rgb(0, 149, 0);
+}
+.logo {
+    float: left;
+}
+
+.nav-list {
+    list-style-type: none;
+    float: right;
+}
+
+.nav-list li {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+}
+
+.nav-list li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-list li::after {
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: rgb(40, 158, 11);
+}
+
+.nav-list li:hover::after {
+    background-color: rgb(18, 168, 28);
+}
+
+.nav-list li:last-child::after {
+    display: none;
+}
+
+button {
+    border-radius: 25px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border-color: green;
+    padding: 5px;
+    font-size: 40px;
+    transition: box-shadow 0.3s ease;
+}
+
+button:hover{
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+/* Main section styles */
+main {
+    padding-top: 85px;
+    background-color: rgb(188, 188, 188);
+    padding-bottom: 10rem;
+}
+
+.nav {
+    height: 10%;
+    position: relative;
+    width: 100%;
+    right: 0;
+    top: 0;
+    padding-bottom: 2%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.nav h2 {
+    color: rgb(0, 0, 0);
+    padding-left: 40%;
+    padding-top: 2%;
+    font-size: 48px;
+}
+
+.container {
+    display: flex;
+    justify-content: left;
+    justify-items: left;
+    margin-top: 1%;
+    margin-right: -20px;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: default;
+}
+
+.questionspart {
+    float: left;
+    flex: 1;
+    width: 50%;
+    height: 100%;
+}
+
+.forms {
+    border-left: 2px solid gray;
+    float: left;
+    flex: 1;
+    width: 50%;
+    padding: 4%;
+    padding-top: 0px;
+}
+
+.btn-div {
+    padding: 1%;
+}
+
+.forms h2 {
+    margin-left: 0;
+}
+
+.questions h3{
+    font-weight: lighter;
+    color: black;
+    padding-bottom: 1%;
+}
+
+.questions p{
+    font-size: x-small;
+    color: black;
+}
+
+input[type=text] {
+    cursor: pointer;
+    outline: 0;
+    font-weight: 300;
+    border: 1px solid black;
+    padding: 6px 12px;
+    border-radius: .25rem;
+    margin-bottom: 5px;
+}
+
+input[type=submit] {
+    cursor: pointer;
+    outline: 0;
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    display: inline-block;
+    font-weight: 300;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: 3px 6px;
+    font-size: 16px;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+input[type=submit]:hover {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+textarea {
+    cursor: pointer;
+    outline: 0;
+    font-weight: 200;
+    border: 1px solid black;
+    padding: 6px 12px;
+    border-radius: .25rem;
+}
+
+.btn-div {
+    padding-bottom: 5%;
+    border-bottom: 2px solid gray;
+}
+
+.questions {
+    background-color: #2222220d;
+    background: #2222220d content-box;
+    margin: 0px;
+    overflow: auto;
+}
+
+.ques {
+    padding: 2%;
+    border-bottom: 0.5px solid gray;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ques-div {
+    background-color: #2222220d;
+    padding: 2%;
+    font-size: small;
+    margin: 2%;
+    margin-bottom: 5%;
+    border-bottom: 1px solid gray;
+}
+
+.ques-resolve {
+    border-bottom:1px solid gray;
+    background-color: #2222220d;
+    padding: 2%;
+    font-size: small;
+    margin: 2%;
+}
+
+.response-div{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.response-div h4{
+    color: black;
+}
+
+.ques-resolve h4{
+    color: black;
+}
+
+.resolve-div,
+.resolve-form {
+    display: none;
+}
+
+h4 {
+    color: gray;
+}
+
+.ques-div h4 {
+    color: black;
+}
+
+.forms h3{
+    color: gray;
+    font-weight: lighter;
+}
+
+.submit-div h1{
+    padding-bottom: 2%;
+    padding-top: 5%;
+}
+.submit-div p{
+    font-size: smaller;
+    padding-bottom: 5%;
+}
+
+#error{
+    color: red;
+    font-weight: bold;
+    font-size: x-small;
+    display: none;
+}
+
+.posted-on{
+    color: white;
+    border-radius: 25px;
+    padding: 5%;
+    background-color: gray;
+    font-size: smaller;
+    min-width: 60%;
+}
+
+.time-likes-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btnsdiv{
+    min-width: 45%;
+}
+
+/* Footer styles */
+footer {
+    background-color: rgb(7, 54, 9);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-nav {
+    list-style-type: none;
+}
+
+.footer-nav li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.pol {
+    color: white;
+}
+
+.footer-nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 48px;
+}
